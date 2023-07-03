@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+
+echo '../src/kikugawa_iso -b 1.0 -alpha 1.0 -hmax 10 -kmax 10'
+../src/kikugawa_iso -b 1.0 -alpha 1.0 -hmax 10 -kmax 10
+
+echo '../src/kikugawa_aniso -bx 1.0 -by 1.0 -bz 1.0 -alpha 1.0 -hmax 10 -kmax 10'
+../src/kikugawa_aniso -bx 1.0 -by 1.0 -bz 1.0 -alpha 1.0 -hmax 10 -kmax 10 
+
