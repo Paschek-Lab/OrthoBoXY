@@ -1,6 +1,6 @@
 # A Simple Way to Compute True Self Diffusion Coefficients from MD Simulations with Periodic Boundary Conditions Without Prior Knowledge of the Viscosity
 
-This repository contains a collection of input files and source code as described in the paper "A Simple Way to Compute True Self Diffusion Coefficients from MD Simulations with Periodic Boundary Conditions Without Prior Knowledge of the Viscosity" by Johanna Busch and Dietmar Paschek. The paper is currently in preparation and can be found on [arXiv](https://arxiv.org/XXX).
+This repository contains a collection of input files and source code as described in the paper "A Simple Way to Compute True Self Diffusion Coefficients from MD Simulations with Periodic Boundary Conditions Without Prior Knowledge of the Viscosity". The paper is currently in preparation and can be found on [arXiv](https://arxiv.org/XXX).
 
 The repository is structured as follows:
 - [simulations](simulations/) : contains the required input files for the molecular dynamics simulations of TIP4P/2005 water at 298 K. The simulations were performed with the GROMACS 5.0.6 software package. If not indicated differently, the simulations are performed under NVT conditions at a temperature of 298 K and a density $\rho=0.9972$ g/cm$^3$. All parameters different from default can be found in `SIMXX.mdp` while `sim1out.mdp` include all used parameters. For naming convention, please refer to the Gromacs-5.0.6-manual. The start configurations are stored in `START.gro`, the corresponding force field parameters can be found in `topol.top`
