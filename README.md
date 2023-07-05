@@ -1,6 +1,6 @@
 # A Simple Way to Compute True Self Diffusion Coefficients from MD Simulations with Periodic Boundary Conditions Without Prior Knowledge of the Viscosity
 
-This repository contains a collection of input files and source code as described in the paper "A Simple Way to Compute True Self Diffusion Coefficients from MD Simulations with Periodic Boundary Conditions Without Prior Knowledge of the Viscosity". The paper is currently in preparation and can be found on [arXiv](https://arxiv.org/XXX).
+This repository contains a collection of input files and source code as described in the paper "A Simple Way to Compute True Self Diffusion Coefficients from MD Simulations with Periodic Boundary Conditions Without Prior Knowledge of the Viscosity". The paper is currently under review and can be found on [arXiv]([https://arxiv.org/XXX](https://arxiv.org/submit/4988105).
 
 The repository is structured as follows:
 - [simulations](simulations/) : contains the required input files for the molecular dynamics simulations of TIP4P/2005 water at 298 K. The simulations were performed with the GROMACS 5.0.6 software package. If not indicated differently, the simulations are performed under NVT conditions at a temperature of 298 K and a density $\rho=0.9972$ g/cm$^3$. All parameters different from default can be found in `SIMXX.mdp` while `sim1out.mdp` include all used parameters. For naming convention, please refer to the Gromacs-5.0.6-manual. The start configurations are stored in `START.gro`, the corresponding force field parameters can be found in `topol.top`
@@ -14,7 +14,7 @@ The repository is structured as follows:
 The program `kikugawa` calculates the Madelung constant analogue $\zeta$ for the [cubic](kikugawa/src/kikugawa_iso.f) and [orthorhombic](kikugawa/src/kikugawa_aniso.f) simulation boxes. The program is based on the work of [Kikugawa et al.](https://pubs.aip.org/aip/jcp/article/143/2/024507/825372/Hydrodynamic-consideration-of-the-finite-size). The program can be compiled by running `make` in the corresponding subfolder. The program can be used in the following way:
 ### [Isotropic case](kikugawa/src/kikugawa_iso.f) - cubic simulation boxes
 **command line options:**
--   `-l` : $l$ Box length of the cubic MD cell
+-   `-l` : $L$ Box length of the cubic MD cell
 -   `-alpha` $\alpha$ : Convergence parameter
 -   `-hmax` : maximum number of iterations for the real lattice summation
 -   `-kmax` : maximum number of iterations for the reciprocal lattice summation
@@ -25,15 +25,15 @@ The program `kikugawa` calculates the Madelung constant analogue $\zeta$ for the
 The self-diffusion coefficient for an infinity large system can be calculated by
 $D_0=D_\mathrm{PBC}+\frac{k_B\cdot T}{6\pi \eta}\cdot\frac{\zeta}{l}$
   
-**Usage:** `kikugawa_iso -alpha <alpha> -b <b> -hmax <hmax> -kmax <kmax>`
+**Usage:** `kikugawa_iso -alpha <alpha> -l <L> -hmax <hmax> -kmax <kmax>`
 
 ### [Anisotropic case](kikugawa/src/kikugawa_aniso.f) - orthorhombic simulation boxes
 
 **command line options:**
+-   `-lx` : $L_x$ Box length of the orthorhombic MD cell in x direction
+-   `-ly` : $L_y$ Box length of the orthorhombic MD cell in y direction
+-   `-lz` : $L_z$ Box length of the orthorhombic MD cell in z direction
 -   `-alpha` $\alpha$ : Convergence parameter
--   `-lx` : $l_x$ Box length of the orthorhombic MD cell in x direction
--   `-ly` : $l_y$ Box length of the orthorhombic MD cell in y direction
--   `-lz` : $l_z$ Box length of the orthorhombic MD cell in z direction
 -   `-hmax` : maximum number of iterations for the real lattice summation
 -   `-kmax` : maximum number of iterations for the reciprocal lattice summation
 
@@ -43,7 +43,7 @@ $D_0=D_\mathrm{PBC}+\frac{k_B\cdot T}{6\pi \eta}\cdot\frac{\zeta}{l}$
 - `zeta_y`: $\zeta_y$ direction dependent Madelung constant analogue of the orthorhombic lattice in y direction
 - `zeta_z`: $\zeta_z$ direction dependent Madelung constant analogue of the orthorhombic lattice in z direction
 
-**Usage:** `kikugawa_aniso -alpha <alpha> -bx <bx> -by <by> -bz <bz> -hmax <hmax> -kmax <kmax>`
+**Usage:** `kikugawa_aniso -alpha <alpha> -lx <Lx> -ly <Ly> -lz <Lz> -hmax <hmax> -kmax <kmax>`
 
 The self-diffusion coefficient for an infinitely large system can be calculated by
 $D_0=D_\mathrm{PBC,\alpha\alpha}+\frac{k_B\cdot T}{6\pi \eta}\cdot\frac{\zeta_{\alpha\alpha}}{l_\alpha}$ with $\alpha \in \{x,y,z\}$
