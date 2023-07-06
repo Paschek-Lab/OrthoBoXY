@@ -1,4 +1,4 @@
-# A Simple Way to Compute True Self Diffusion Coefficients from MD Simulations with Periodic Boundary Conditions Without Prior Knowledge of the Viscosity
+#OrthoBoXY: A Simple Way to Compute True Self Diffusion Coefficients from MD Simulations with Periodic Boundary Conditions Without Prior Knowledge of the Viscosity
 
 This repository contains a collection of input files and source code as described in the paper "A Simple Way to Compute True Self Diffusion Coefficients from MD Simulations with Periodic Boundary Conditions Without Prior Knowledge of the Viscosity". The paper is currently under review and can be found on [arXiv](https://arxiv.org/abs/2307.01591).
 
