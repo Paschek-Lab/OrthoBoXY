@@ -16,7 +16,7 @@ The program `kikugawa` calculates the Madelung constant analogue $\zeta$ for the
 **command line options:**
 -   `-l` : $L$ Box length of the cubic MD cell
 -   `-alpha` $\alpha$ : Convergence parameter
--   `-hmax` : maximum range of integers $m_\alpha$ for the real lattice summation
+-   `-hmax` : maximum range $m_\mathrm{max}$ of integers $m_\alpha$  with $-m_\mathrm{max} \leq m_\alpha \leq m_\mathrm{max}$ for the real lattice summation
 -   `-kmax` : maximum range of integers $m_\alpha$ for the reciprocal lattice summation
 
 **Return values:** The program returns the following value:
