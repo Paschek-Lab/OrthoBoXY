@@ -24,7 +24,7 @@ The program `kikugawa` calculates the Madelung constant analogue $\zeta$ for the
 - `zeta` : $\zeta$ Madelung constant analogue of a cubic lattice
 
 The self-diffusion coefficient for an infinity large system can be calculated by
-$D_0=D_\mathrm{PBC}+\frac{k_B\cdot T}{6\pi \eta}\cdot\frac{\zeta}{l}$
+$D_0=D_\mathrm{PBC}+\frac{k_B\cdot T}{6\pi \eta}\cdot\frac{\zeta}{L}$
   
 **Usage:** `kikugawa_iso -alpha <alpha> -l <L> -hmax <hmax> -kmax <kmax>`
 
@@ -47,7 +47,7 @@ $D_0=D_\mathrm{PBC}+\frac{k_B\cdot T}{6\pi \eta}\cdot\frac{\zeta}{l}$
 **Usage:** `kikugawa_aniso -alpha <alpha> -lx <Lx> -ly <Ly> -lz <Lz> -hmax <hmax> -kmax <kmax>`
 
 The self-diffusion coefficient for an infinitely large system can be calculated by
-$D_0=D_\mathrm{PBC,\alpha\alpha}+\frac{k_B\cdot T}{6\pi \eta}\cdot\frac{\zeta_{\alpha\alpha}}{l_\alpha}$ with $\alpha \in \{x,y,z\}$
+$D_0=D_\mathrm{PBC,\alpha\alpha}+\frac{k_B\cdot T}{6\pi \eta}\cdot\frac{\zeta_{\alpha\alpha}}{L_\alpha}$ with $\alpha \in \{x,y,z\}$
 
 
 
