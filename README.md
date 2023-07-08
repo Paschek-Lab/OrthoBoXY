@@ -15,13 +15,13 @@ The repository is structured as follows:
 The program `kikugawa` calculates the Madelung constant analogue $\zeta$ for the [cubic](kikugawa/src/kikugawa_iso.f) and [orthorhombic](kikugawa/src/kikugawa_aniso.f) simulation boxes. The program is based on the work of [Kikugawa et al.](https://pubs.aip.org/aip/jcp/article/143/2/024507/825372/Hydrodynamic-consideration-of-the-finite-size). The program can be compiled by running `make` in the corresponding subfolder. The program can be used in the following way:
 ### [Isotropic case](kikugawa/src/kikugawa_iso.f) - cubic simulation boxes
 **command line options:**
--   `-l` : $L$ Box length of the cubic MD cell
--   `-alpha` $\alpha$ : Convergence parameter
--   `-hmax` : maximum range $m_\mathrm{max}$ of integers $m_\alpha$  with $-m_\mathrm{max} \leq m_\alpha \leq m_\mathrm{max}$ for the real lattice summation
--   `-kmax` : maximum range $m_\mathrm{max}$ of integers $m_\alpha$  with $-m_\mathrm{max} \leq m_\alpha \leq m_\mathrm{max}$ for the reciprocal lattice summation
+-   `-l` $L$ : Box length of the cubic MD cell
+-   `-alpha` $\alpha$ : Ewald convergence parameter
+-   `-hmax` $m_\mathrm{max}$ : maximum range of integers $m_\alpha$  with $-m_\mathrm{max} \leq m_\alpha \leq m_\mathrm{max}$ for the real lattice summation
+-   `-kmax` $m_\mathrm{max}$ : maximum range of integers $m_\alpha$  with $-m_\mathrm{max} \leq m_\alpha \leq m_\mathrm{max}$ for the reciprocal lattice summation
 
 **Return values:** The program returns the following value:
-- `zeta` : $\zeta$ Madelung constant analogue of a cubic lattice
+- `zeta` $\zeta$ : Madelung constant analogue of a cubic lattice
 
 The self-diffusion coefficient for an infinity large system can be calculated by
 $D_0=D_\mathrm{PBC}+\frac{k_B\cdot T}{6\pi \eta}\cdot\frac{\zeta}{L}$
@@ -31,18 +31,18 @@ $D_0=D_\mathrm{PBC}+\frac{k_B\cdot T}{6\pi \eta}\cdot\frac{\zeta}{L}$
 ### [Anisotropic case](kikugawa/src/kikugawa_aniso.f) - orthorhombic simulation boxes
 
 **command line options:**
--   `-lx` : $L_x$ Box length of the orthorhombic MD cell in x direction
--   `-ly` : $L_y$ Box length of the orthorhombic MD cell in y direction
--   `-lz` : $L_z$ Box length of the orthorhombic MD cell in z direction
--   `-alpha` $\alpha$ : Convergence parameter
--   `-hmax` : maximum range $m_\mathrm{max}$ of integers $m_\alpha$  with $-m_\mathrm{max} \leq m_\alpha \leq m_\mathrm{max}$ for the real lattice summation
--   `-kmax` : maximum range $m_\mathrm{max}$ of integers $m_\alpha$  with $-m_\mathrm{max} \leq m_\alpha \leq m_\mathrm{max}$ for the reciprocal lattice summation
+-   `-lx` $L_x$ : Box length of the orthorhombic MD cell in x direction
+-   `-ly` $L_y$ : Box length of the orthorhombic MD cell in y direction
+-   `-lz` $L_z$ : Box length of the orthorhombic MD cell in z direction
+-   `-alpha` $\alpha$ : Ewald onvergence parameter
+-   `-hmax` $m_\mathrm{max}$ : Maximum range of integers $m_\alpha$  with $-m_\mathrm{max} \leq m_\alpha \leq m_\mathrm{max}$ for the real lattice summation
+-   `-kmax` $m_\mathrm{max}$ : Maximum range of integers $m_\alpha$  with $-m_\mathrm{max} \leq m_\alpha \leq m_\mathrm{max}$ for the reciprocal lattice summation
 
 
 **Return values:** The program returns the following values:
-- `zeta_x`: $\zeta_x$ direction dependent Madelung constant analogue of the orthorhombic lattice in x direction
-- `zeta_y`: $\zeta_y$ direction dependent Madelung constant analogue of the orthorhombic lattice in y direction
-- `zeta_z`: $\zeta_z$ direction dependent Madelung constant analogue of the orthorhombic lattice in z direction
+- `zeta_x` $\zeta_x$ : Direction dependent Madelung constant analogue of the orthorhombic lattice in x direction
+- `zeta_y` $\zeta_y$ : Direction dependent Madelung constant analogue of the orthorhombic lattice in y direction
+- `zeta_z` $\zeta_z$ : Direction dependent Madelung constant analogue of the orthorhombic lattice in z direction
 
 **Usage:** `kikugawa_aniso -alpha <alpha> -lx <Lx> -ly <Ly> -lz <Lz> -hmax <hmax> -kmax <kmax>`
 
