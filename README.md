@@ -52,4 +52,4 @@ $D_0=D_\mathrm{PBC,\alpha\alpha}+\frac{k_B\cdot T}{6\pi \eta}\cdot\frac{\zeta_{\
 
 
 
-For further information, please contact [the authors](mailto:dietmar.pascheck@uni-rostock.de).
+For further information, please contact [the authors](mailto:dietmar.paschek@uni-rostock.de).
