@@ -4,7 +4,7 @@
 This repository contains a collection of input files and source code as described in the paper "OrthoBoXY: A Simple Way to Compute True Self Diffusion Coefficients from MD Simulations with Periodic Boundary Conditions Without Prior Knowledge of the Viscosity". The paper is currently under review and can be found on [arXiv](https://arxiv.org/abs/2307.01591).
 
 The repository is structured as follows:
-- [simulations/](simulations/) : contains the required input files for the molecular dynamics simulations of TIP4P/2005 water at 298 K. The simulations were performed with the GROMACS 5.0.6 software package. If not indicated differently, the simulations are performed under NVT conditions at a temperature of 298 K and a density $\rho=0.9972$ $\mbox{g}$ $\mbox{cm}^{-3}$. All parameters different from default can be found in `SIMXX.mdp` while `sim1out.mdp` include all used parameters. For naming convention, please refer to the Gromacs-5.0.6-manual. The start configurations are stored in `START.gro`, the corresponding force field parameters can be found in `topol.top`
+- [simulations/](simulations/) contains the required input files for the molecular dynamics simulations of TIP4P/2005 water at 298 K. The simulations were performed with the GROMACS 5.0.6 software package. If not indicated differently, the simulations are performed under NVT conditions at a temperature of 298 K and a density $\rho=0.9972$ $\mbox{g}$ $\mbox{cm}^{-3}$. All parameters different from default can be found in `SIMXX.mdp` while `sim1out.mdp` include all used parameters. For naming convention, please refer to the Gromacs-5.0.6-manual. The start configurations are stored in `START.gro`, the corresponding force field parameters can be found in `topol.top`
     - The subfolder [simulations/cubic_box/](simulations/cubic_box/) contains the input files for the cubic simulation boxes with system sizes 256, 512, 1024 and 2048 molecules, while the subfolder [simulations/orthorhombic_box/](simulations/orthorhombic_box/) contains the input files for MD simulations with system sizes of 768, 1536, 3072 and 6144 molecules using an orthorhombic unit cell with $L_z/L_x=L_z/L_y\approx 2.7933596497$
   - The subfolder [simulations/orthorhombic_box/3072/NPT/](simulations/orthorhombic_box/3072/NPT/) contains the input files for the NPT simulations with 3072 molecules at a pressure of $P=1$ bar.
 
@@ -17,8 +17,8 @@ The program `kikugawa` calculates the Madelung constant analogue $\zeta$ for the
 **command line options:**
 -   `-l` $L$ : Box length of the cubic MD cell
 -   `-alpha` $\alpha$ : Ewald convergence parameter
--   `-hmax` $m_\mathrm{max}$ : Maximum range of integers $m_\alpha$  with $-m_\mathrm{max} \leq m_\alpha \leq m_\mathrm{max}$ for the real lattice summation
--   `-kmax` $m_\mathrm{max}$ : Maximum range of integers $m_\alpha$  with $-m_\mathrm{max} \leq m_\alpha \leq m_\mathrm{max}$ for the reciprocal lattice summation
+-   `-hmax` $h_\mathrm{max}$ : Maximum range of integers $m_\alpha$  with $-h_\mathrm{max} \leq m_\alpha \leq h_\mathrm{max}$ for the real lattice summation
+-   `-kmax` $k_\mathrm{max}$ : Maximum range of integers $m_\alpha$  with $-k_\mathrm{max} \leq m_\alpha \leq k_\mathrm{max}$ for the reciprocal lattice summation
 
 **Return values:** The program returns the following value:
 - `zeta` $\zeta$ : Madelung constant analogue of a cubic lattice
@@ -35,8 +35,8 @@ $D_0=D_\mathrm{PBC}+\frac{k_B\cdot T}{6\pi \eta}\cdot\frac{\zeta}{L}$
 -   `-ly` $L_y$ : Box length of the orthorhombic MD cell in y direction
 -   `-lz` $L_z$ : Box length of the orthorhombic MD cell in z direction
 -   `-alpha` $\alpha$ : Ewald onvergence parameter
--   `-hmax` $m_\mathrm{max}$ : Maximum range of integers $m_\alpha$  with $-m_\mathrm{max} \leq m_\alpha \leq m_\mathrm{max}$ for the real lattice summation
--   `-kmax` $m_\mathrm{max}$ : Maximum range of integers $m_\alpha$  with $-m_\mathrm{max} \leq m_\alpha \leq m_\mathrm{max}$ for the reciprocal lattice summation
+-   `-hmax` $h_\mathrm{max}$ : Maximum range of integers $m_\alpha$  with $-h_\mathrm{max} \leq m_\alpha \leq h_\mathrm{max}$ for the real lattice summation
+-   `-kmax` $k_\mathrm{max}$ : Maximum range of integers $m_\alpha$  with $-k_\mathrm{max} \leq m_\alpha \leq k_\mathrm{max}$ for the reciprocal lattice summation
 
 
 **Return values:** The program returns the following values:
