@@ -6,7 +6,7 @@ This repository contains a collection of input files and source code as describe
 
 The method described in this paper allows the calculation of system-size independent self-diffusion coefficients and shear viscosities from MD simulations.
 
-A more generalized version of this “OrthoBoXY” approach can be applied to any orthorhombic MD box is tested in the submitted paper “An OrthoBoXY-Method for Various Alternative Box Geometries”, its preprint is publicly available at arXiv.
+A more generalized version of this “OrthoBoXY” approach can be applied to any orthorhombic MD box is tested in the submitted paper “An OrthoBoXY-Method for Various Alternative Box Geometries”, its preprint is publicly available at [arXiv](http://arxiv.org/abs/2310.01026).
 
 
 The repository is structured as follows:
