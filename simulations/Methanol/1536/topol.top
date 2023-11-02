@@ -1,0 +1,42 @@
+ [ defaults ]
+ ; nbfunc   comb-rule   gen-pairs  fudgeLJ  fudgeQQ
+     1       3          yes      0.5     0.5
+
+ [ atomtypes ]
+ ;name   mass   charge   ptype   c6   c12
+  ho1            1.00782     0.49980  A     0.00000     0.00000
+  o2            15.99900    -0.65440  A     0.31659     0.81295
+  c3            15.03400     0.15460  A     0.36499     0.91834
+
+ [ moleculetype ]
+ ; Name            nrexcl
+meoh        3
+
+ [ atoms ]
+ ;   nr   type  resnr residue  atom  cgnr charge  mass
+    1 ho1            1 meoh       ho1            1      0.4998       1.0078
+    2 o2             1 meoh       o2             2     -0.6544      15.9990
+    3 c3             1 meoh       c3             3      0.1546      15.0340
+
+ [ constraints ]
+ ;  ai    aj
+    1     2     1    0.945000E-01
+    2     3     1    0.143000E+00
+
+ [ angles ]
+ ;  ai    aj    ak
+    1     2     3    1    0.108500E+03    0.460620E+03
+
+ [ exclusions ]
+ ;  ai    aj
+    1     2
+    2     3
+    1     3
+
+ [ system ]
+ ; Name
+ Converted from moscito
+
+ [ molecules ]
+ ; Compound        #mols
+meoh          1536

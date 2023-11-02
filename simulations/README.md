@@ -1,0 +1,6 @@
+
+- 
+- of TIP4P/2005 water at 298 K. If not indicated differently, the simulations are performed under NVT conditions at a temperature of 298 K and a density $\rho=0.9972$ $\mbox{g}$ $\mbox{cm}^{-3}$. 
+    - The subfolder [cubic/](simulations/cubic/) contains the input files for the cubic simulation boxes with system sizes 256, 512, 1024 and 2048 molecules, while the subfolder [orthoboxy/](simulations/orthoboxy/) contains the input files for MD simulations with system sizes of 768, 1536, 3072 and 6144 molecules using an orthorhombic unit cell with $L_z/L_x=L_z/L_y\approx 2.7933596497$
+  - The subfolder [orthoboxy/3072/NPT/](simulations/orthoboxy/3072/NPT/) contains the input files for the NPT simulations with 3072 molecules at a pressure of $P=1$ bar.
+  - The subfolder [orthorhombic/](simulations/orthorhombic/) contains the input files for simulations with various orthorhombic simulation cells with $L_x\neq L_y \neq L_z$. All systems in this folder contain 1536 water molecules and fulfil the condition $\frac{L_y}{L_z} = \frac{L_x}{L_y}$. The corresponding start configurations are named according to the box-length ratio $\frac{L_y}{L_z}=XXX$ of the simulation cell as `START_lylzXXX.gro`.
