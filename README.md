@@ -8,7 +8,8 @@ The method described in this paper allows the calculation of system-size indepen
 
 A more generalized version of this “OrthoBoXY” approach can be applied to any orthorhombic MD box is tested in the submitted paper “An OrthoBoXY-Method for Various Alternative Box Geometries”, its preprint is publicly available at [arXiv](http://arxiv.org/abs/2310.01026).
 
-The method is tested for various systems such as liquid water, dimethylether, methanol, triglyme, water/methanol mixtures, water/triglyme mixtures, and imidazolium-based ionic liquids.
+The method is tested for various systems such as liquid water, dimethylether, methanol, triglyme, water/methanol mixtures, water/triglyme mixtures, and imidazolium-based ionic liquids in the paper "Computing Accurate True Self-Diffusion Coefficients and Shear Viscosities Using the OrthoBoXY Approach". The corresponding preprint is publicly available from [ChemRxiv](https://doi.org/10.26434/chemrxiv-2023-fvf5q).
+
 The repository is structured as follows:
 - [simulations/](simulations/) contains the required input files for the molecular dynamics simulations various systems. The simulations were performed with the GROMACS 5.0.6 software package. All parameters different from default can be found in `SIMXX.mdp` while `sim1out.mdp` include all used parameters. For naming convention, please refer to the Gromacs-5.0.6-manual. The start configurations are stored in `START.gro`, the corresponding force field parameters can be found in `topol.top`. An overview of the performed simulations is given in the [README](simulations/README.md) in the corresponding folder. 
   - For the creation of the various orthorhombic MD cells, please refer to the folder [InitialConfigCreation](simulations/TIP4P2005/orthorhombic/InitialConfigCreation/) and the corresponding [README](simulations/TIP4P2005/orthorhombic/InitialConfigCreation/README.md).
