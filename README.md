@@ -40,7 +40,7 @@ $D_0=D_\mathrm{PBC}+\frac{k_B\cdot T}{6\pi \eta}\cdot\frac{\zeta}{L}$
 -   `-lx` $L_x$ : Box length of the orthorhombic MD cell in x direction
 -   `-ly` $L_y$ : Box length of the orthorhombic MD cell in y direction
 -   `-lz` $L_z$ : Box length of the orthorhombic MD cell in z direction
--   `-alpha` $\alpha$ : Ewald onvergence parameter
+-   `-alpha` $\alpha$ : Ewald convergence parameter
 -   `-hmax` $h_\mathrm{max}$ : Maximum range of integers $m_\alpha$  with $-h_\mathrm{max} \leq m_\alpha \leq h_\mathrm{max}$ for the real lattice summation
 -   `-kmax` $k_\mathrm{max}$ : Maximum range of integers $m_\alpha$  with $-k_\mathrm{max} \leq m_\alpha \leq k_\mathrm{max}$ for the reciprocal lattice summation
 
