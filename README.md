@@ -1,10 +1,10 @@
 
 # OrthoBoXY: A Simpler Way to Compute True Self Diffusion Coefficients and Viscosities from Molecular Simulation
 
-This repository contains a collection of input files and source code as described in the paper "OrthoBoXY: A Simple Way to Compute True Self Diffusion Coefficients from MD Simulations with Periodic Boundary Conditions Without Prior Knowledge of the Viscosity", which has just been published in
+This repository contains a collection of input files and source code first described in the paper "OrthoBoXY: A Simple Way to Compute True Self Diffusion Coefficients from MD Simulations with Periodic Boundary Conditions Without Prior Knowledge of the Viscosity", which has just been published in
 [J. Phys. Chem. B](https://doi.org/10.1021/acs.jpcb.3c04492). The corresponding preprint is publicly available from [arXiv:2307.01591 [cond-mat.soft]](https://arxiv.org/abs/2307.01591).
 
-The method described in this paper allows the calculation of system-size independent self-diffusion coefficients and shear viscosities from MD simulations.
+The method introduced in this paper allows the calculation of system-size independent self-diffusion coefficients and shear viscosities from MD simulations.
 
 A more generalized version of this “OrthoBoXY” approach can be applied to any orthorhombic MD box is tested in the submitted paper “An OrthoBoXY-Method for Various Alternative Box Geometries”, its preprint is publicly available at [arXiv](http://arxiv.org/abs/2310.01026).
 
