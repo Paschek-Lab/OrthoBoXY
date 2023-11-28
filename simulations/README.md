@@ -3,7 +3,7 @@
 This folder contains input files for performing simulations of various systems using the OrthoBoXY approach and sytem sizes of 768, 1536, 3072 and 6144 molecules/ion pairs. The simulations were performed with the GROMACS 5.0.6 software package. All parameters different from default can be found in `SIMXX.mdp` while `sim1out.mdp` include all used parameters. For naming convention, please refer to the Gromacs-5.0.6-manual. The start configurations are stored in `START.gro`, the corresponding force field parameters can be found in `topol.top`. 
 
 The studied systems are:
-| System | NVT/NpT | $T$ / K | $p$ / bar | $\rho$ / g cm$^{-3}$ | Force Field |
+| System | NVT/NpT | $T$ / K | $p$ / bar | $\rho$ / g cm$`^{-3}`$ | Force Field |
 | :--- | :---: | :---: | :---: | :---: | :---: |
 | [TIP4P/2005](TIP4P2005/) | NVT and NpT | 298 | 1.0 | 0.9972 | [TIP4P/2005](https://doi.org/10.1063/1.2121687) |
 | [Dimethyl Ether](Dimethylether/) | NpT | 303 | 50.0 | 0.6603 | [TraPPE-UA](https://doi.org/10.1021/jp049459w) |
